@@ -1,6 +1,6 @@
 {
   "name": "express-es6-sample",
-  "version": "0.4.0",
+  "version": "0.2.0",
   "private": true,
   "author": {
     "name": "Jonathan Cunanan",
@@ -41,11 +41,11 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "start:prod": "npm run prod",
+    "start": "npm run prod",
     "build": "npm run clean && npm run transpile",
-    "start": "node ./dist-server/bin/www",
-    "dev": "NODE_ENV=development npm run start",
-    "prod": "NODE_ENV=production npm run start",
+    "server": "node ./dist-server/bin/www",
+    "dev": "NODE_ENV=development npm run server",
+    "prod": "NODE_ENV=production npm run server",
     "transpile": "babel ./server --out-dir dist-server",
     "clean": "rm -rf dist-server",
     "watch:dev": "nodemon",
